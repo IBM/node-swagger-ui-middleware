@@ -1,0 +1,8 @@
+{
+	"name": "swagger-ui-middleware",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"dustjs-linkedin": "*"
+	}
+}
