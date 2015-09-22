@@ -1,3 +1,11 @@
+/**
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2015, 2015. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ */
 
 // The purpose of the `Content` object is to abstract away the data conversions
 // to and from raw content entities as strings. For example, you want to be able
@@ -28,7 +36,7 @@ Content.prototype = {
 
 // `Content` objects have the following attributes:
 Object.defineProperties(Content.prototype,{
-  
+
 // - **type**. Typically accessed as `content.type`, reflects the `content-type`
 //   header associated with the request or response. If not passed as an options
 //   to the constructor or set explicitly, it will infer the type the `data`
@@ -142,7 +150,7 @@ Content.processors = {};
 // - **stringify**. The function used to convert a Javascript data type into a
 //   raw content entity.
 Content.registerProcessor = function(types,processor) {
-  
+
 // You can pass an array of types that will trigger this processor, or just one.
 // We determine the array via duck-typing here.
   if (types.forEach) {
