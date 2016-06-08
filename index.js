@@ -44,6 +44,7 @@ function swaggerLandingPageRendererFactory(spec) {
 			 	console.log("Dust error: " + e);
 			 	res.status(500).end();
 			 })
+			 .setEncoding('UTF-8')
 			 .pipe(res)
 			 ;
 		});
