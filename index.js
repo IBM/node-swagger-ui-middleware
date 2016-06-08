@@ -39,14 +39,15 @@ function swaggerLandingPageRendererFactory(spec) {
 				contextRoot: req.originalUrl
 			};
 
-			(new Readable()).wrap(addPause(dust.stream(templateFilename, context)))
-			 .on("error", function (e) {
-			 	console.log("Dust error: " + e);
-			 	res.status(500).end();
-			 })
-			 .setEncoding('UTF-8')
-			 .pipe(res)
-			 ;
+
+			dust.render(templateFilename, context, function(err, result) {
+				if (err) {
+					console.log("Dust error: " + e);
+			 		return res.status(500).end();	
+				}
+
+				return res.send(result);
+			});
 		});
 	};
 }
