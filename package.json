@@ -1,6 +1,8 @@
 {
 	"name": "swagger-ui-middleware",
 	"version": "v0.0.1",
+    "author": "Chris Taylor <cntaylor@ca.ibm.com>",
+    "license": "MIT",
 	"private": true,
 	"dependencies": {
 		"dustjs-linkedin": "2.6.1"
